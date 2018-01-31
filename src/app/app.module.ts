@@ -15,8 +15,8 @@ import { FaceDetectorProvider  } from '../providers/face-detector.provider';
     BrowserModule
   ],
   providers: [
-    { provide: 'FaceDetector', useValue: new window['FaceDetector']({ fastMode: true, maxDetectedFaces: 2 }) }
-    // FaceDetectorProvider
+    // { provide: 'FaceDetector', useValue: new window['FaceDetector']({ fastMode: true, maxDetectedFaces: 2 }) }
+    FaceDetectorProvider
   ],
   bootstrap: [AppComponent]
 })

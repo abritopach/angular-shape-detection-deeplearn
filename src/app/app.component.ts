@@ -63,8 +63,8 @@ export class AppComponent implements AfterViewInit {
     this.ctx.canvas.style.height = ch + 'px';
   }
 
-  constructor( private zone: NgZone, @Inject('FaceDetector') private faceDetector: any
-  /*@Inject('FaceDetector') private faceDetector: IFaceDetector*/) {}
+  constructor( private zone: NgZone, /*@Inject('FaceDetector') private faceDetector: any*/
+  @Inject(FaceDetector) private faceDetector: IFaceDetector) {}
 
   ngAfterViewInit() {
     // Get references to the video and canvas elements.
