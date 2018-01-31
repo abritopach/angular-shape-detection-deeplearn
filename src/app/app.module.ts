@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { FaceDetectorProvider  } from '../providers/face-detector.provider';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +14,10 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    { provide: 'FaceDetector', useValue: new window['FaceDetector']({ fastMode: true, maxDetectedFaces: 2 }) }
+    // FaceDetectorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
